@@ -1,7 +1,5 @@
 
 
-
-
 <?php
 session_start();
 
@@ -56,6 +54,19 @@ $resultado = $stmt->get_result();
         .enlaces-superiores a:hover {
             background-color: #0b2448;
             color: #ffffff;
+        }
+
+        /* Enlaces de acciones en negrita y color visible sobre fondo blanco */
+        .acciones a {
+            font-weight: bold !important;
+            text-decoration: none;
+            color: #000000 !important;
+            background-color: transparent;
+        }
+
+        .acciones a:hover {
+            text-decoration: underline;
+            color: #12376a !important;
         }
     </style>
 </head>

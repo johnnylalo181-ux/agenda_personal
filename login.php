@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Mensaje de bienvenida fuera del formulario -->
     <div class="bienvenida">
         <h1>Bienvenido</h1>
-        <p>Sistema Agenda Personal</p>
+        <p>Sistema de gestión de contactos</p>
     </div>
 
     <div class="contenedor">
