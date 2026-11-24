@@ -7,7 +7,7 @@ require_once "config/conexion.php";
 
 // Verificar que el usuario haya iniciado sesión
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -106,19 +106,19 @@ $resultado = $stmt->get_result();
 
                             <tr>
                                 <td>
-                                    <?php echo htmlspecialchars($contacto['nombre']); ?>
+                                    <?php echo htmlspecialchars($contacto['nombre'], ENT_QUOTES, 'UTF-8'); ?>
                                 </td>
 
                                 <td>
-                                    <?php echo htmlspecialchars($contacto['telefono']); ?>
+                                    <?php echo htmlspecialchars($contacto['telefono'], ENT_QUOTES, 'UTF-8'); ?>
                                 </td>
 
                                 <td>
-                                    <?php echo htmlspecialchars($contacto['correo']); ?>
+                                    <?php echo htmlspecialchars($contacto['correo'], ENT_QUOTES, 'UTF-8'); ?>
                                 </td>
 
                                 <td>
-                                    <?php echo htmlspecialchars($contacto['ciudad']); ?>
+                                    <?php echo htmlspecialchars($contacto['ciudad'], ENT_QUOTES, 'UTF-8'); ?>
                                 </td>
 
                                 <td class="acciones">

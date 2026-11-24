@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 
@@ -7,7 +5,7 @@ require_once "config/conexion.php";
 
 // Verificar que el usuario haya iniciado sesión
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -108,7 +106,6 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
     <title>Agregar contacto | Agenda Personal</title>
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -296,7 +293,6 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
                 text-align: center;
             }
         }
-
     </style>
 </head>
 
@@ -327,8 +323,8 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
 
         <?php if ($mensaje !== ""): ?>
 
-            <div class="mensaje <?php echo $tipo_mensaje; ?>">
-                <?php echo htmlspecialchars($mensaje); ?>
+            <div class="mensaje <?php echo htmlspecialchars($tipo_mensaje, ENT_QUOTES, 'UTF-8'); ?>">
+                <?php echo htmlspecialchars($mensaje, ENT_QUOTES, 'UTF-8'); ?>
             </div>
 
         <?php endif; ?>
@@ -349,7 +345,7 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
                     name="nombre"
                     maxlength="100"
                     placeholder="Ingresa el nombre completo"
-                    value="<?php echo htmlspecialchars($_POST['nombre'] ?? ''); ?>"
+                    value="<?php echo htmlspecialchars($_POST['nombre'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
                     required
                 >
 
@@ -367,7 +363,7 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
                         name="telefono"
                         maxlength="20"
                         placeholder="Ej. 0991234567"
-                        value="<?php echo htmlspecialchars($_POST['telefono'] ?? ''); ?>"
+                        value="<?php echo htmlspecialchars($_POST['telefono'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
                         required
                     >
 
@@ -383,7 +379,7 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
                         name="ciudad"
                         maxlength="100"
                         placeholder="Ingresa la ciudad"
-                        value="<?php echo htmlspecialchars($_POST['ciudad'] ?? ''); ?>"
+                        value="<?php echo htmlspecialchars($_POST['ciudad'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
                         required
                     >
 
@@ -401,7 +397,7 @@ if (isset($_GET['registro']) && $_GET['registro'] === 'exitoso') {
                     name="correo"
                     maxlength="100"
                     placeholder="ejemplo@correo.com"
-                    value="<?php echo htmlspecialchars($_POST['correo'] ?? ''); ?>"
+                    value="<?php echo htmlspecialchars($_POST['correo'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
                     required
                 >
 

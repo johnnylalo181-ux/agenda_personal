@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 
@@ -7,7 +5,7 @@ require_once "config/conexion.php";
 
 // Verificar si el usuario inició sesión
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 

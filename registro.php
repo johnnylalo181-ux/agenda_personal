@@ -4,7 +4,7 @@ session_start();
 
 require_once "config/conexion.php";
 
-$pagina_principal = "login.php";
+$pagina_principal = "index.php";
 
 $mensaje = "";
 $tipo_mensaje = "";

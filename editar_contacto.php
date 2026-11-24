@@ -6,7 +6,7 @@ require_once "config/conexion.php";
 
 // Verificar que el usuario haya iniciado sesión
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -135,7 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Editar contacto - Agenda Personal</title>
 
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/editar.css">
 
 </head>
@@ -150,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <?php if ($mensaje !== ''): ?>
 
-            <p class="<?php echo htmlspecialchars($tipo_mensaje); ?>">
+            <p class="<?php echo htmlspecialchars($tipo_mensaje, ENT_QUOTES, 'UTF-8'); ?>">
                 <?php echo htmlspecialchars($mensaje, ENT_QUOTES, 'UTF-8'); ?>
             </p>
 

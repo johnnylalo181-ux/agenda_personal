@@ -8,7 +8,7 @@ require_once "config/conexion.php";
 
 // Verificar que el usuario haya iniciado sesión
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -66,5 +66,3 @@ if ($stmt->execute()) {
 
     die("No se pudo eliminar el contacto.");
 }
-
-?>
